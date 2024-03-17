@@ -9,9 +9,7 @@ const Project= () => {
     return (
         <Container>
             <p>
-            <TypeIt
-            options={{
-                strings: [`here's a basic outline for a machine learning project:<br/>
+            here's a basic outline for a machine learning project:<br/>
                 <br/>
                 1. Problem Definition: Clearly define the problem you want to solve. For example, if you're working on a dataset of housing prices, your problem could be to predict the price of a house based on its features.<br/>
                 <br/>
@@ -66,11 +64,7 @@ const Project= () => {
                 print('Mean Squared Error:', mse)<br/>
                 <br/>
                 This is a very basic example and can be expanded upon in many ways, such as using more sophisticated models, performing more in-depth data preprocessing, or incorporating advanced techniques like ensemble learning or neural networks.<br/>
-                `],
-                speed: 1,
-                waitUntilVisible: true,
-            }}
-            />
+                
             </p>
         </Container>
       )

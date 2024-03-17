@@ -9,9 +9,7 @@ const UserWelcome = () => {
   return (
     <Container>
         <p>
-        <TypeIt
-        options={{
-            strings: [`<br/>ML, which stands for machine learning, is a field of artificial intelligence (AI) that focuses on developing algorithms that can learn from data and improve their performance on a specific task without being explicitly programmed.<br/>
+<br/>ML, which stands for machine learning, is a field of artificial intelligence (AI) that focuses on developing algorithms that can learn from data and improve their performance on a specific task without being explicitly programmed.<br/>
             <br/>
             Imagine a program that can learn to identify spam emails by analyzing tons of emails and figuring out patterns that differentiate spam from real emails. That's machine learning in action.<br/>
             <br/>
@@ -28,11 +26,7 @@ const UserWelcome = () => {
            <br/>Image and speech recognition:<br/> Powering features like facial recognition in photos or voice assistants on smartphones.<br/>
            <br/>Natural language processing:<br/> Enabling machines to understand and respond to human language.<br/>
             
-           <br/>Machine learning is a rapidly evolving field with the potential to revolutionize many aspects of our lives.`],
-            speed: 1,
-            waitUntilVisible: true,
-        }}
-        />
+           <br/>Machine learning is a rapidly evolving field with the potential to revolutionize many aspects of our lives.
         </p>
     </Container>
   )

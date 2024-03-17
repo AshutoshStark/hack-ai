@@ -9,9 +9,7 @@ const Tool = () => {
   return (
     <Container>
         <p>
-        <TypeIt
-        options={{
-            strings: [`<br/>Here's a roadmap to get you started on your machine learning journey:<br/>
+`<br/>Here's a roadmap to get you started on your machine learning journey:<br/>
 
             <br/>1. Grasp the Fundamentals:<br/>
             
@@ -45,11 +43,7 @@ const Tool = () => {
             
             <br/>Machine learning is a rapidly evolving field.<br/> Stay updated with the latest advancements and research by following blogs, attending conferences, and participating in online communities.
             
-            <br/>Remember, this is a roadmap, not a rigid schedule.  Feel free to adjust the pace and delve deeper into areas that pique your interest. There are many online resources, courses, and communities available to support you on your machine learning journey.`],
-            speed: 1,
-            waitUntilVisible: true,
-        }}
-        />
+            <br/>Remember, this is a roadmap, not a rigid schedule.  Feel free to adjust the pace and delve deeper into areas that pique your interest. There are many online resources, courses, and communities available to support you on your machine learning journey.`
 </p>
     </Container>
   )
