@@ -8,8 +8,11 @@ const UserWelcome = () => {
 
   return (
     <Container>
+        <p className='heading_style'>AL / ML: - </p>
         <p>
-<br/>ML, which stands for machine learning, is a field of artificial intelligence (AI) that focuses on developing algorithms that can learn from data and improve their performance on a specific task without being explicitly programmed.<br/>
+<br/>AI, or artificial intelligence, is the big picture term for machines that can act and think like humans. Machine learning (ML) is a type of AI where computers learn from data, like improving their ability to recognize faces in photos or translate languages.
+
+Imagine AI as a toolbox, and machine learning is a really powerful tool within that box. AI can achieve intelligence through other methods too, like by following programmed rules.<br/>
             <br/>
             Imagine a program that can learn to identify spam emails by analyzing tons of emails and figuring out patterns that differentiate spam from real emails. That's machine learning in action.<br/>
             <br/>
@@ -37,21 +40,31 @@ p{
     height: 80%;
     color: white;
 }
-font-size: .8rem;
+font-size: 1rem;
 padding: 1rem;
-width: 75vw;
+width: 65vw;
 color: white;
 height: 65vh;
-background: rgba( 155, 99, 15, 0.75 );
+margin: 5px;
+/* background: rgba( 144, 19, 254, 0.6 ); */
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 8.5px );
--webkit-backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 10px );
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 display: flex;
+flex-direction: column;
 align-items: center;
-flex-direction: row;
 overflow-y: scroll;
+
+.heading_style{
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 10px 0;
+  color: #ffffff;
+}
 `
 
 export default UserWelcome

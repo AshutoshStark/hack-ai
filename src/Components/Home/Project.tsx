@@ -74,13 +74,14 @@ const Project= () => {
  p{
     height: 80%;
     color: white;
+    margin: 0pc 20px;
 }
 font-size: .8rem;
 padding: 1rem;
 width: 75vw;
 color: white;
 height: 65vh;
-background: rgba( 155, 99, 15, 0.75 );
+/* background: rgba( 155, 99, 15, 0.75 ); */
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 8.5px );
 -webkit-backdrop-filter: blur( 8.5px );
@@ -90,5 +91,5 @@ display: flex;
 align-items: center;
 flex-direction: row;
 overflow-y: scroll;
-    `
+`
 export default Project
