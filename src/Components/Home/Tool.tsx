@@ -53,10 +53,10 @@ const Tool = () => {
 const Container = styled.div`
 p{
     height: 80%;
-    color: white;
+    color: #000000;
     margin: 0px 20px;
 }
-font-size: 1rem;
+font-size: .9rem;
 padding: 1rem;
 width: 65vw;
 color: white;

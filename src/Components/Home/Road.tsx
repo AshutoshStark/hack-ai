@@ -8,7 +8,7 @@ const Road = () => {
   return (
     <Container>
         <p>
-        `The best roadmap to learn AI depends on your background and goals. Here's a general approach that you can customize:<br/>
+        The best roadmap to learn AI depends on your background and goals. Here's a general approach that you can customize:<br/>
 
             <br/>1. Foundational knowledge:<br/>
             
@@ -34,7 +34,7 @@ const Road = () => {
             <br/>Remember:<br/>
             
             <br/>Tailor the journey:<br/> This is a general roadmap,  adjust it based on your interests (computer vision, natural language processing, etc.).
-            <br/>Stay updated:<br/> The field of AI is constantly evolving. Keep up with the latest advancements through research papers, blogs, and conferences.`
+            <br/>Stay updated:<br/> The field of AI is constantly evolving. Keep up with the latest advancements through research papers, blogs, and conferences.
     </p>
     </Container>
   )
@@ -43,7 +43,7 @@ const Road = () => {
 const Container = styled.div`
 p{
     height: 80%;
-    color: white;
+    color: #000000;
 }
 font-size: 1rem;
 padding: 1rem;

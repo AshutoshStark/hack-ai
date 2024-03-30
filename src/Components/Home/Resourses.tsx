@@ -25,7 +25,7 @@ a{
 }
 p{
     height: 80%;
-    color: white;
+    color: #000000;
 }
 font-size: 1rem;
 padding: 1rem;

@@ -38,7 +38,7 @@ Imagine AI as a toolbox, and machine learning is a really powerful tool within t
 const Container = styled.div`
 p{
     height: 80%;
-    color: white;
+    color: #000000;
 }
 font-size: 1rem;
 padding: 1rem;
@@ -61,9 +61,10 @@ overflow-y: scroll;
 .heading_style{
   text-align: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 700;
   margin: 10px 0;
-  color: #ffffff;
+  color: #000000;
 }
 `
 
