@@ -1,13 +1,38 @@
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
-import { Children, useEffect, useState } from 'react';
+import { Children, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components'
 import React from 'react'
 import TypeIt from 'typeit-react';
+import { useWavesurfer } from '@wavesurfer/react';
 
 const UserWelcome = () => {
 
+  const [toggle,setToggle]=useState<boolean>(true)
+
+  const containerRef = useRef(null)
+
+  const { wavesurfer, isReady, isPlaying, currentTime } = useWavesurfer({
+    container: containerRef,
+    url: toggle ? 'assets/home.mp3' : 'assets/homeHindi.mp3',
+    waveColor: 'red',
+    height: 0,
+  })
+
+  const onPlayPause = () => {
+    wavesurfer && wavesurfer.playPause()
+    console.log(isReady)
+  }
+
   return (
     <Container>
+      <div className='speech'>
+  <button onClick={()=>setToggle(!toggle)}>
+        {toggle ? 'English' : 'Hindi'}
+      </button>
+  <button onClick={onPlayPause}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+</div>
         <p className='heading_style'>AL / ML: - </p>
         <p>
 <br/>AI, or artificial intelligence, is the big picture term for machines that can act and think like humans. Machine learning (ML) is a type of AI where computers learn from data, like improving their ability to recognize faces in photos or translate languages.
@@ -36,6 +61,26 @@ Imagine AI as a toolbox, and machine learning is a really powerful tool within t
 }
 
 const Container = styled.div`
+
+.speech{
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  
+  button{
+    color:white;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+}
+
 p{
     height: 80%;
     color: #000000;
