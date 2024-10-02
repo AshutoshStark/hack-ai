@@ -3,7 +3,7 @@ import { Children, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components'
 import React from 'react'
 import TypeIt from 'typeit-react';
-import { useWavesurfer } from '@wavesurfer/react';
+import WavesurferPlayer, { useWavesurfer } from '@wavesurfer/react';
 
 const UserWelcome = () => {
 
@@ -11,20 +11,35 @@ const UserWelcome = () => {
 
   const containerRef = useRef(null)
 
-  const { wavesurfer, isReady, isPlaying, currentTime } = useWavesurfer({
-    container: containerRef,
-    url: toggle ? 'assets/home.mp3' : 'assets/homeHindi.mp3',
-    waveColor: 'red',
-    height: 0,
-  })
+  // const { wavesurfer, isReady, isPlaying, currentTime } = useWavesurfer({
+  //   container: containerRef,
+  //   url: 'assets/home.mp3',
+  //   waveColor: 'red',
+  //   height: 0,
+  // })
+
+  const [wavesurfer, setWavesurfer] = useState<any>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const onReady = (ws:any) => {
+    setWavesurfer(ws)
+    setIsPlaying(false)
+  }
 
   const onPlayPause = () => {
     wavesurfer && wavesurfer.playPause()
-    console.log(isReady)
   }
 
   return (
     <Container>
+      <WavesurferPlayer
+        height={0}
+        waveColor="violet"
+        url= {toggle ? "assets/home.mp3" : "assets/homeHindi.mp3"}
+        onReady={onReady}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      />
       <div className='speech'>
   <button onClick={()=>setToggle(!toggle)}>
         {toggle ? 'English' : 'Hindi'}
